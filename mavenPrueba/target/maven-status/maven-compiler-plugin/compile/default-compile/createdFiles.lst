@@ -1,0 +1,4 @@
+py\com\progweb\prueba\model\Persona.class
+py\com\progweb\prueba\rest\ApplicationConfig.class
+py\com\progweb\prueba\rest\PersonaRest.class
+py\com\progweb\prueba\ejb\PersonaDAO.class
