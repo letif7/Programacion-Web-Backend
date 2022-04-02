@@ -5,13 +5,13 @@
   <version>0.1</version>
   <packaging>war</packaging>
   <name>mavenPrueba</name>
-  <description>Este es una prueba para usar Maven</description>
+  <description>Primer Parcial BackEnd</description>
   <properties>
   	<maven.compiler.source>16</maven.compiler.source>
   	<maven.compiler.target>16</maven.compiler.target>
-  	<db.name>backendPrueba</db.name>
-  	<db.username>postgres</db.username>
-	<db.password>12345</db.password>
+  	<db.name>zonkrapd</db.name>
+  	<db.username>zonkrapd</db.username>
+	<db.password>5mXwIC03Xfriqh-WIjTVR3-E4CV_4sMk</db.password>
   </properties>
   <dependencies>
 	  	<dependency>
@@ -102,9 +102,9 @@
 				 	<artifactId>flyway-maven-plugins</artifactId>
 				 	<version>4.0</version>
 				 	<configuration>
-				 		<url>jdbc:postgresql://localhost:5432/backendPrueba</url>
-				 		<user>postgres</user>
-				 		<password>12345</password>
+				 		<url>postgres://zonkrapd:5mXwIC03Xfriqh-WIjTVR3-E4CV_4sMk@tuffi.db.elephantsql.com/zonkrapd</url>
+				 		<user>zonkrapd</user>
+				 		<password>5mXwIC03Xfriqh-WIjTVR3-E4CV_4sMk</password>
 				 	</configuration>
 				 	<dependencies>
 				 		<dependency>
