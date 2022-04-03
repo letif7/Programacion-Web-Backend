@@ -35,7 +35,7 @@ public class Cliente {
     @Basic(optional = true)
     private String telefono;
     @Column(name = "fecha_nacimiento")
-    @Basic(optional = false)
+    @Basic(optional = true)
     @Temporal(TemporalType.DATE)
     @JsonFormat(shape = JsonFormat.Shape.STRING,pattern="yyyy-MM-dd")
     private Date fecha_nacimiento;
