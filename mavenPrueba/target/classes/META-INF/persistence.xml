@@ -6,7 +6,7 @@
       <!-- The datasource is deployed as ${ds-deployment-location}, you
          can find it in the source at postgres_local-ds.xml -->
       <jta-data-source>java:jboss/datasources/laboratorio</jta-data-source>
-      <class>py.com.progweb.prueba.model.Persona</class>
+      <class>py.com.progweb.prueba.model.Cliente</class>
       <properties>
          <property name="hibernate.id.new_generator_mappings" value="true"/>
          <property name="hibernate.show_sql" value="true" />

@@ -4,64 +4,115 @@
   <artifactId>maven-prueba</artifactId>
   <version>0.1</version>
   <packaging>war</packaging>
-  <name>mavenPrueba</name>
+  <name>primerparcial</name>
   <description>Primer Parcial BackEnd</description>
   <properties>
-  	<maven.compiler.source>16</maven.compiler.source>
-  	<maven.compiler.target>16</maven.compiler.target>
-  	<db.name>zonkrapd</db.name>
-  	<db.username>zonkrapd</db.username>
-	<db.password>5mXwIC03Xfriqh-WIjTVR3-E4CV_4sMk</db.password>
+  	<maven.compiler.source>15</maven.compiler.source>
+  	<maven.compiler.target>15</maven.compiler.target>
+  	<db.name>primerparcial</db.name>
+  	<db.username>postgres</db.username>
+	<db.password>postgres</db.password>
   </properties>
-  <dependencies>
-	  	<dependency>
-	  		<groupId>javax.ejb</groupId>
-	  		<artifactId>ejb-api</artifactId>
-	  		<version>3.0</version>
-	  		<scope>provided</scope>
-	  	</dependency>
-	  	<dependency>
-	  		<groupId>junit</groupId>
-	  		<artifactId>junit</artifactId>
-	  		<version>4.11</version>
-	  		<scope>test</scope>
-	  	</dependency>
-	  	<dependency>
-	  		<groupId>javax.ws.rs</groupId>
-	  		<artifactId>javax.ws.rs-api</artifactId>
-	  		<version>2.1.1</version>
-	  	</dependency>
-	  	<dependency>
-	  		<groupId>org.hibernate.orm</groupId>
-	  		<artifactId>hibernate-core</artifactId>
-	  		<version>6.0.0.CR2</version>
-	  	</dependency>
-	  	<dependency>
-	  		<groupId>javax.persistence</groupId>
-	  		<artifactId>javax.persistence-api</artifactId>
-	  		<version>2.2</version>
-	  	</dependency>
-	  	<dependency>
-	  		<groupId>javax.inject</groupId>
-	  		<artifactId>javax.inject</artifactId>
-	  		<version>1</version>
-	  	</dependency>
-	  	<dependency>
-	  		<groupId>org.json</groupId>
-	  		<artifactId>json</artifactId>
-	  		<version>20220320</version>
-	  	</dependency>
-				<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+	<dependencies>
 		<dependency>
-		    <groupId>org.postgresql</groupId>
-		    <artifactId>postgresql</artifactId>
-		    <version>42.2.24</version>
+			<groupId>javax.ejb</groupId>
+			<artifactId>ejb-api</artifactId>
+			<version>3.0</version>
+			<scope>provided</scope>
 		</dependency>
-				
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.ws.rs</groupId>
+			<artifactId>javax.ws.rs-api</artifactId>
+			<version>2.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate.orm</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>6.0.0.CR2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>5.6.5.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate.javax.persistence</groupId>
+			<artifactId>hibernate-jpa-2.0-api</artifactId>
+			<version>1.0.1.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>dom4j</groupId>
+			<artifactId>dom4j</artifactId>
+			<version>1.6.1</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.enterprise</groupId>
+			<artifactId>cdi-api</artifactId>
+			<version>1.0-SP4</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.persistence</groupId>
+			<artifactId>javax.persistence-api</artifactId>
+			<version>2.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.spec.javax.ejb</groupId>
+			<artifactId>jboss-ejb-api_3.1_spec</artifactId>
+			<version>1.0.2.Final</version>
+			<scope>provided</scope>
+		</dependency>
+		<!--		<dependency>-->
+		<!--			<groupId>org.jboss.as</groupId>-->
+		<!--			<artifactId>jboss-as-ejb3</artifactId>-->
+		<!--			<version>7.1.0.CR1</version>-->
+		<!--		</dependency>-->
+		<dependency>
+			<groupId>javax.inject</groupId>
+			<artifactId>javax.inject</artifactId>
+			<version>1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>2.2.3</version>
+			<scope>provided</scope>
+			<type>jar</type>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.spec.javax.ws.rs</groupId>
+			<artifactId>jboss-jaxrs-api_1.1_spec</artifactId>
+			<version>1.0.1.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20220320</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>42.2.24</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jetbrains</groupId>
+			<artifactId>annotations</artifactId>
+			<version>23.0.0</version>
+			<scope>compile</scope>
+		</dependency>
+
 	</dependencies>
+
   
 	<build>
-	  	<finalName>pruebaMaven</finalName>
+	  	<finalName>primerparcial</finalName>
 	  	<pluginManagement>
 	  		<plugins>
 	  			<plugin>
@@ -102,15 +153,15 @@
 				 	<artifactId>flyway-maven-plugins</artifactId>
 				 	<version>4.0</version>
 				 	<configuration>
-				 		<url>postgres://zonkrapd:5mXwIC03Xfriqh-WIjTVR3-E4CV_4sMk@tuffi.db.elephantsql.com/zonkrapd</url>
-				 		<user>zonkrapd</user>
-				 		<password>5mXwIC03Xfriqh-WIjTVR3-E4CV_4sMk</password>
+				 		<url>jdbc:postgresql://localhost:5432/primerparcial</url>
+				 		<user>postgres</user>
+				 		<password>postgres</password>
 				 	</configuration>
 				 	<dependencies>
 				 		<dependency>
 				 			<groupId>org.postgresql</groupId>
 				 			<artifactId>postgresql</artifactId>
-				 			<version>42.3.3</version>
+				 			<version>42.2.24</version>
 				 		</dependency>
 				 	</dependencies>
 				 </plugin>

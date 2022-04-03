@@ -1,4 +1,4 @@
-C:\Users\HP\eclipse-workspace\mavenPrueba\src\main\java\py\com\progweb\prueba\model\Persona.java
-C:\Users\HP\eclipse-workspace\mavenPrueba\src\main\java\py\com\progweb\prueba\ejb\PersonaDAO.java
-C:\Users\HP\eclipse-workspace\mavenPrueba\src\main\java\py\com\progweb\prueba\rest\ApplicationConfig.java
-C:\Users\HP\eclipse-workspace\mavenPrueba\src\main\java\py\com\progweb\prueba\rest\PersonaRest.java
+E:\NITRO 5\Documents\10mo_Semestre\Back-End\Primer-Parcial\mavenPrueba\src\main\java\py\com\progweb\prueba\rest\ApplicationConfig.java
+E:\NITRO 5\Documents\10mo_Semestre\Back-End\Primer-Parcial\mavenPrueba\src\main\java\py\com\progweb\prueba\model\Cliente.java
+E:\NITRO 5\Documents\10mo_Semestre\Back-End\Primer-Parcial\mavenPrueba\src\main\java\py\com\progweb\prueba\rest\ClienteRest.java
+E:\NITRO 5\Documents\10mo_Semestre\Back-End\Primer-Parcial\mavenPrueba\src\main\java\py\com\progweb\prueba\ejb\ClienteDAO.java
