@@ -39,7 +39,12 @@ public class VencimientoRest {
     public Response crear(VencimientoPuntos v){
         boolean booleano = vencimientoDAO.agregar(v);
         if (booleano){
-            return Response.ok().build();
+            if(VencimientoPuntos.compararFechas(v.getFecha_inicio_validez(), v.getFecha_fin_validez())) {
+                return Response.ok().build();
+            }else{
+                Integer vencimientoEliminado= vencimientoDAO.eliminarVencimiento(v.getIdVencimiento());
+                return Response.status(400).entity("Verifique que la fecha de inicio no sea mayor a la fecha de fin.").build();
+            }
         } else {
             return Response.status(400).entity("No se puede crear el objeto. Verifique la validez de los datos.").build();
         }

@@ -1,4 +1,7 @@
 py\com\progweb\prueba\ejb\ClienteDAO.class
+py\com\progweb\prueba\model\VencimientoPuntos.class
+py\com\progweb\prueba\ejb\VencimientoDAO.class
+py\com\progweb\prueba\rest\VencimientoRest.class
 py\com\progweb\prueba\rest\ClienteRest.class
 py\com\progweb\prueba\rest\ApplicationConfig.class
 py\com\progweb\prueba\model\Cliente.class
