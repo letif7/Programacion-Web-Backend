@@ -1,4 +1,7 @@
 py\com\progweb\prueba\model\Punto.class
+py\com\progweb\prueba\model\UsoPuntosCabecera.class
+py\com\progweb\prueba\rest\UsoPuntosRest.class
+py\com\progweb\prueba\ejb\UsoPuntosDAO.class
 py\com\progweb\prueba\rest\ApplicationConfig.class
 py\com\progweb\prueba\ejb\PuntoDAO.class
 py\com\progweb\prueba\model\BolsaPuntos.class
@@ -11,4 +14,5 @@ py\com\progweb\prueba\rest\PuntoRest.class
 py\com\progweb\prueba\ejb\ProcesoPlanificado.class
 py\com\progweb\prueba\rest\ServiciosPuntos.class
 py\com\progweb\prueba\rest\ClienteRest.class
+py\com\progweb\prueba\model\UsoPuntosDetalle.class
 py\com\progweb\prueba\model\Cliente.class

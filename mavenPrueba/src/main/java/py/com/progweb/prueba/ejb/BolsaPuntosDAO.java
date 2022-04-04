@@ -6,6 +6,7 @@ import java.util.Date;
 import java.util.List;
 
 import javax.ejb.Stateless;
+import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
@@ -19,6 +20,8 @@ public class BolsaPuntosDAO {
 
 	@PersistenceContext(unitName = "pruebaPU")
 	private EntityManager em;
+	@Inject
+	private ClienteDAO clienteDAO;
 
 	public void agregar(BolsaPuntos bolsaPuntos) {
 
@@ -56,6 +59,31 @@ public class BolsaPuntosDAO {
 	public List<BolsaPuntos> listarTodos(){ //obtener todos los vencimientos
 		Query q = this.em.createQuery("SELECT v FROM BolsaPuntos v");
 		return (List<BolsaPuntos>) q.getResultList();
+	}
+
+	public Integer getTotalPuntosByCliente(Integer idCliente){
+		Cliente cliente = clienteDAO.obtener(idCliente);
+		Query q = em.createQuery("Select SUM(b.saldo_puntos) from BolsaPuntos b where b.idcliente= :idCliente and b.saldo_puntos>0");
+		Long result = (Long)q.setParameter("idCliente", idCliente).getSingleResult();
+		if (result == null){
+			return 0;
+		}else {
+			return result.intValue();
+		}
+	}
+
+	public List<BolsaPuntos> getByClienteIdSaldoNoCero (Integer id_cliente){
+		Cliente cliente = clienteDAO.obtener(id_cliente);
+		Query q = em.createQuery("Select b from BolsaPuntos b where b.idcliente= :cliente and b.saldo_puntos>0 order by fecha_asignacion_puntaje asc");
+		return (List<BolsaPuntos>) q.setParameter("cliente",id_cliente).getResultList();
+	}
+
+	public void usarPuntos(BolsaPuntos bolsaPuntos, Integer puntosAUsar){
+		BolsaPuntos bolsa = this.em.find(BolsaPuntos.class, bolsaPuntos.getIdbolsa());
+		Integer saldo = bolsa.getSaldo_puntos();
+		Integer puntajeUtilizado = bolsa.getPuntaje_utilizado();
+		bolsa.setPuntaje_utilizado( puntajeUtilizado + puntosAUsar);
+		bolsa.setSaldo_puntos( saldo - puntosAUsar );
 	}
 
 	public BolsaPuntosDAO() {

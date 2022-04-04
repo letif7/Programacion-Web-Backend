@@ -8,7 +8,11 @@ E:\NITRO 5\Documents\10mo_Semestre\Back-End\Primer-Parcial\mavenPrueba\src\main\
 E:\NITRO 5\Documents\10mo_Semestre\Back-End\Primer-Parcial\mavenPrueba\src\main\java\py\com\progweb\prueba\model\Cliente.java
 E:\NITRO 5\Documents\10mo_Semestre\Back-End\Primer-Parcial\mavenPrueba\src\main\java\py\com\progweb\prueba\rest\ClienteRest.java
 E:\NITRO 5\Documents\10mo_Semestre\Back-End\Primer-Parcial\mavenPrueba\src\main\java\py\com\progweb\prueba\ejb\ClienteDAO.java
+E:\NITRO 5\Documents\10mo_Semestre\Back-End\Primer-Parcial\mavenPrueba\src\main\java\py\com\progweb\prueba\model\UsoPuntosDetalle.java
+E:\NITRO 5\Documents\10mo_Semestre\Back-End\Primer-Parcial\mavenPrueba\src\main\java\py\com\progweb\prueba\rest\UsoPuntosRest.java
 E:\NITRO 5\Documents\10mo_Semestre\Back-End\Primer-Parcial\mavenPrueba\src\main\java\py\com\progweb\prueba\rest\ServiciosPuntos.java
 E:\NITRO 5\Documents\10mo_Semestre\Back-End\Primer-Parcial\mavenPrueba\src\main\java\py\com\progweb\prueba\ejb\VencimientoDAO.java
+E:\NITRO 5\Documents\10mo_Semestre\Back-End\Primer-Parcial\mavenPrueba\src\main\java\py\com\progweb\prueba\model\UsoPuntosCabecera.java
 E:\NITRO 5\Documents\10mo_Semestre\Back-End\Primer-Parcial\mavenPrueba\src\main\java\py\com\progweb\prueba\model\VencimientoPuntos.java
+E:\NITRO 5\Documents\10mo_Semestre\Back-End\Primer-Parcial\mavenPrueba\src\main\java\py\com\progweb\prueba\ejb\UsoPuntosDAO.java
 E:\NITRO 5\Documents\10mo_Semestre\Back-End\Primer-Parcial\mavenPrueba\src\main\java\py\com\progweb\prueba\rest\VencimientoRest.java
