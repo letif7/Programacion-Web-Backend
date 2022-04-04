@@ -30,27 +30,27 @@ public class BolsaPuntos {
     private Integer idcliente;
     
     @Column(name = "fecha_asignacion_puntaje")
-    @Basic(optional = false)
+    @Basic(optional = true)
     @Temporal(TemporalType.DATE)
-    @JsonFormat(shape = JsonFormat.Shape.STRING,pattern="yyyy-MM-dd")
+    @JsonFormat(shape = JsonFormat.Shape.STRING,pattern="dd-MM-yyyy")
     private Date fecha_asignacion_puntaje;
     
     @Column(name = "fecha_caducidad_puntaje")
-    @Basic(optional = false)
+    @Basic(optional = true)
     @Temporal(TemporalType.DATE)
     @JsonFormat(shape = JsonFormat.Shape.STRING,pattern="dd-MM-yyyy")
     private Date fecha_caducidad_puntaje;
     
     @Column(name = "puntaje_asignado")
-    @Basic(optional = false)
+    @Basic(optional = true)
     private Integer puntaje_asignado;
     
     @Column(name = "puntaje_utilizado")
-    @Basic(optional = false)
+    @Basic(optional = true)
     private Integer puntaje_utilizado;
     
     @Column(name = "saldo_puntos")
-    @Basic(optional = false)
+    @Basic(optional = true)
     private Integer saldo_puntos;
     
     @Column(name = "monto_operacion")

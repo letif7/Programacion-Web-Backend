@@ -9,6 +9,7 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import java.util.List;
 
+
 @Stateless
 public class ClienteDAO {
     @PersistenceContext(unitName = "pruebaPU")

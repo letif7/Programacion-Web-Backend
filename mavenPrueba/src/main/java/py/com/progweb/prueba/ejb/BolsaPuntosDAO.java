@@ -27,9 +27,6 @@ public class BolsaPuntosDAO {
 
 		Date fecha_asignacion = new Date();
 		bolsaPuntos.setFecha_asignacion_puntaje(fecha_asignacion);
-
-		System.out.println(obtenerDuracion(fecha_asignacion)+1);
-
 		Date fechaExpiracion = sumarRestarDias(fecha_asignacion,obtenerDuracion(fecha_asignacion)+1);
 		bolsaPuntos.setFecha_caducidad_puntaje(fechaExpiracion);
 		//Integer puntaje = bolsaPuntos.getMonto_operacion()/obtenerMontoPunto(bolsaPuntos.getMonto_operacion());
@@ -40,9 +37,9 @@ public class BolsaPuntosDAO {
 	}
 
 	private int obtenerDuracion(Date fecha) {
-		Query q = this.em.createQuery("select v.dias_duracion_puntaje from VencimientoPuntos v where :fechaDate between v.fecha_inicio_validez and v.fecha_fin_validez");
-		return q.setParameter("fechaDate",fecha).getFirstResult();
-	}
+        Query q = this.em.createQuery("select v.dias_duracion_puntaje from VencimientoPuntos v where :fechaDate between v.fecha_inicio_validez and v.fecha_fin_validez");
+        return q.setParameter("fechaDate",fecha).getFirstResult();
+    }
 
 	private int obtenerMontoPunto(Integer monto_operacion ) {
 		Query q = this.em.createQuery("select v.monto_punto from AsignacionPuntos v where :monto_operacion between v.limite_inferior and v.limite_superior");
@@ -88,6 +85,11 @@ public class BolsaPuntosDAO {
 
 	public BolsaPuntosDAO() {
 
+	public Integer obtenerPuntos(Integer monto_operacion) {
+		Integer puntos = monto_operacion/obtenerMontoPunto(monto_operacion);
+		return puntos;
 	}
+
+
 
 }
