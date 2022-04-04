@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="maven-prueba" target="15" />
+      <module name="maven-prueba" target="16" />
     </bytecodeTargetLevel>
   </component>
 </project>

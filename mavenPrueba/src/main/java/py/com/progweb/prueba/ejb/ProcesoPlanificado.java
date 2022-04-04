@@ -12,7 +12,7 @@ import java.util.Date;
 public class ProcesoPlanificado {
     @Inject
     BolsaPuntosDAO bolsaPuntosDAO;
-
+    
     @PersistenceContext(unitName = "pruebaPU")
     private EntityManager em;
     //se setea cuanto tiempo se quiere correr este proceso

@@ -3,6 +3,7 @@ target/
 .project/
 .settings/
 src/main/java/py/com/progweb/prueba/test/
+.idea/
 
 
 

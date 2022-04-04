@@ -10,26 +10,25 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 
 import py.com.progweb.prueba.ejb.BolsaPuntosDAO;
-import py.com.progweb.prueba.ejb.ClienteDAO;
 import py.com.progweb.prueba.ejb.UsoPuntosDAO;
 import py.com.progweb.prueba.model.BolsaPuntos;
-import py.com.progweb.prueba.model.Cliente;
 import py.com.progweb.prueba.model.UsoPuntos;
 
 @Path("servicios-puntos")
 @Consumes("application/json")
 @Produces("application/json")
 public class ServiciosPuntos {
-	@Inject
-	private BolsaPuntosDAO bolsaPuntosDAO;
+	
 	@Inject
 	private UsoPuntosDAO usoPuntosDAO;
+	@Inject
+	private BolsaPuntosDAO bolsaPuntosDAO;
 	
 	@POST
     @Path("/")
     public Response cargarPuntos(BolsaPuntos bolsaPuntos){
 		bolsaPuntosDAO.agregar(bolsaPuntos);
-        return Response.ok().build();
+        return Response.ok("El monto fue agregado al cliente").build();
 	}
 
 	@GET
@@ -45,9 +44,12 @@ public class ServiciosPuntos {
 	}
 
 	@POST
-	@Path("utilizar-puntos")
+	@Path("utilizar")
 	public Response usarPuntos(UsoPuntos usoPuntos){
 		usoPuntosDAO.agregarUso(usoPuntos);
         return Response.ok().build();
 	}
+	
+	
+	
 }

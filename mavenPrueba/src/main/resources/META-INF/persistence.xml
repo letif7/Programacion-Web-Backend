@@ -10,6 +10,8 @@
      <class>py.com.progweb.prueba.model.Punto</class>   
      <class>py.com.progweb.prueba.model.BolsaPuntos</class>
      <class>py.com.progweb.prueba.model.VencimientoPuntos</class>
+     <class>py.com.progweb.prueba.model.UsoPuntos</class>
+     <class>py.com.progweb.prueba.model.AsignacionPuntos</class>
       <properties>
          <property name="hibernate.id.new_generator_mappings" value="true"/>
          <property name="hibernate.show_sql" value="true" />
