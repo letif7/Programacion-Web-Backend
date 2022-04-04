@@ -5,9 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1b6c4b8-632b-473b-9982-235288166210" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/py/com/progweb/prueba/rest/Consultas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/py/com/progweb/prueba/ejb/BolsaPuntosDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/py/com/progweb/prueba/ejb/ProcesoPlanificado.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/py/com/progweb/prueba/ejb/PuntoDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/py/com/progweb/prueba/ejb/VencimientoDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/py/com/progweb/prueba/model/BolsaPuntos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/py/com/progweb/prueba/model/Punto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/py/com/progweb/prueba/model/VencimientoPuntos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/py/com/progweb/prueba/rest/PuntoRest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/py/com/progweb/prueba/rest/ServiciosPuntos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/py/com/progweb/prueba/rest/VencimientoRest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/py/com/progweb/prueba/model/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/py/com/progweb/prueba/model/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +97,7 @@
       <updated>1648996665797</updated>
       <workItem from="1648996667085" duration="2330000" />
       <workItem from="1649020559208" duration="557000" />
-      <workItem from="1649070372626" duration="11466000" />
+      <workItem from="1649070372626" duration="11882000" />
     </task>
     <servers />
   </component>
