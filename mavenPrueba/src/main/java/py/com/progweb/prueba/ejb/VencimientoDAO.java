@@ -17,7 +17,9 @@ public class VencimientoDAO {
 
     public boolean agregar(@NotNull VencimientoPuntos vencimientoPuntos){
         if (validar(VencimientoPuntos.sumarRestarDias(vencimientoPuntos.getFecha_inicio_validez(),1))&& validar(VencimientoPuntos.sumarRestarDias(vencimientoPuntos.getFecha_fin_validez(),1))){
+            //System.out.println("fecha antes"+vencimientoPuntos.getFecha_inicio_validez());
             vencimientoPuntos.setFecha_inicio_validez(VencimientoPuntos.sumarRestarDias(vencimientoPuntos.getFecha_inicio_validez(),1));
+            //System.out.println("fecha luego"+vencimientoPuntos.getFecha_inicio_validez());
             vencimientoPuntos.setFecha_fin_validez(VencimientoPuntos.sumarRestarDias(vencimientoPuntos.getFecha_fin_validez(),1));
             this.em.persist(vencimientoPuntos);
             return true;

@@ -39,7 +39,12 @@ public class VencimientoRest {
     public Response crear(VencimientoPuntos v){
         boolean booleano = vencimientoDAO.agregar(v);
         if (booleano){
-            return Response.ok().build();
+            if(VencimientoPuntos.compararFechas(v.getFecha_inicio_validez(), v.getFecha_fin_validez())) {
+                return Response.ok().build();
+            }else{
+                Integer vencimientoEliminado= vencimientoDAO.eliminarVencimiento(v.getIdVencimiento());
+                return Response.status(400).entity("Verifique que la fecha de inicio no sea mayor a la fecha de fin.").build();
+            }
         } else {
             return Response.status(400).entity("No se puede crear el objeto. Verifique la validez de los datos.").build();
         }
@@ -51,7 +56,7 @@ public class VencimientoRest {
         Integer vencimientoEliminado= vencimientoDAO.eliminarVencimiento(id_vencimiento);
         try {
             if (vencimientoEliminado == 200){
-                return Response.ok("Eliminado con éxito").build();
+                return Response.ok("Eliminado con Ã©xito").build();
             }else{
                 return Response.status(404).entity("Este objeto no existe en la Base de Datos").build();
             }
@@ -67,7 +72,7 @@ public class VencimientoRest {
         Response respuesta = Response.status(400).build();
         try{
             if (estado == 200){
-                respuesta = Response.ok("Ha sido actualizado con éxito").build();
+                respuesta = Response.ok("Ha sido actualizado con Ã©xito").build();
             }else if (estado == 404){
                 respuesta = Response.status(404).entity("El objeto no se encuentra en la Base de datos").build();
             }

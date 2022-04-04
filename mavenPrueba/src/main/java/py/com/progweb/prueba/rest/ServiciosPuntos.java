@@ -31,25 +31,23 @@ public class ServiciosPuntos {
 		bolsaPuntosDAO.agregar(bolsaPuntos);
         return Response.ok().build();
 	}
-	
+
 	@GET
 	@Path("/")
 	public Response listarTodos() { return  Response.ok(bolsaPuntosDAO.listarTodos()).build(); }
-	
+
 	@GET
 	@Path("obtenerPuntos/{monto_operacion}")
 	public Response obtenerPuntos(@PathParam("monto_operacion") Integer monto_operacion) {
 		Integer puntos = bolsaPuntosDAO.obtenerPuntos(monto_operacion);
-		
+
 		return Response.ok("La cantidad de puntos equivalente es "+puntos).build();
 	}
-	
+
 	@POST
 	@Path("utilizar-puntos")
 	public Response usarPuntos(UsoPuntos usoPuntos){
 		usoPuntosDAO.agregarUso(usoPuntos);
         return Response.ok().build();
 	}
-	
-	
 }

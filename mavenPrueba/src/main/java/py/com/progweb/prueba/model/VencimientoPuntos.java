@@ -73,4 +73,19 @@ public class VencimientoPuntos {
         calendario.add(Calendar.DAY_OF_YEAR, dias);
         return java.sql.Date.valueOf(new SimpleDateFormat("yyyy-MM-dd").format(calendario.getTime()));
     }
+
+    public static Integer fechaToDias(java.util.Date fecha){
+        Calendar calendario = Calendar.getInstance();
+        calendario.setTime(fecha);
+        return calendario.get(Calendar.DAY_OF_YEAR);
+    }
+
+    public static boolean compararFechas(java.util.Date fechaUno, java.util.Date fechaDos){
+        Calendar calendario = Calendar.getInstance();
+        calendario.setTime(fechaUno);
+        int anhoUno = calendario.get(Calendar.YEAR);
+        calendario.setTime(fechaDos);
+        int anhoDos = calendario.get(Calendar.YEAR);
+        return ( anhoUno <= anhoDos ) && ( fechaToDias(fechaUno) <= fechaToDias(fechaDos)) ;
+    }
 }

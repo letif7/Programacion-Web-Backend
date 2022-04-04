@@ -1,6 +1,6 @@
 target/
-.classpath
-.project
+.classpath/
+.project/
 .settings/
 src/main/java/py/com/progweb/prueba/test/
 
