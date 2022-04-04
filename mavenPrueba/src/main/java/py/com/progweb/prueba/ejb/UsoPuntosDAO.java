@@ -3,6 +3,7 @@ package py.com.progweb.prueba.ejb;
 import py.com.progweb.prueba.model.*;
 
 import javax.ejb.Stateless;
+import javax.enterprise.event.Event;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -16,6 +17,9 @@ public class UsoPuntosDAO {
     private EntityManager em;
     @Inject
     BolsaPuntosDAO bolsaPuntosDAO;
+
+//    @Inject
+//    private Event<MailEvent> eventProducer;
 
     public void agregarCabecera(UsoPuntosCabecera usoPuntosCabecera){
         em.persist(usoPuntosCabecera);
@@ -39,10 +43,20 @@ public class UsoPuntosDAO {
         return (List<UsoPuntosCabecera>)q.setParameter("concepto",concepto).getResultList();
     }
 
-//    public List<UsoPuntosCabecera> getByFecha(String fechaStr){
-//        java.util.Date fecha = java.sql.Date.valueOf(fechaStr);
-//        Query q = em.createQuery("select u from dsffesdfds");
-//    }
+    public List<UsoPuntosCabecera> getByFecha(String fechaStr){
+        java.util.Date fecha = java.sql.Date.valueOf(fechaStr);
+        Query q = em.createQuery("select u from UsoPuntosCabecera u where u.fecha_uso = :fecha");
+        return (List<UsoPuntosCabecera>) q.setParameter("fecha",fecha).getResultList();
+    }
+
+    public List<UsoPuntosCabecera> getByCliente(Integer idCliente){
+        Cliente cliente = this.em.find(Cliente.class, idCliente);
+        if (cliente == null){
+            return null;
+        }
+        Query q = em.createQuery("select u from UsoPuntosCabecera u where u.cliente = :cliente");
+        return (List<UsoPuntosCabecera>) q.setParameter("cliente",cliente).getResultList();
+    }
 
     public String utilizarPuntos(UsoPuntosCabecera usoPuntosCabecera){
         Integer idCliente = usoPuntosCabecera.getCliente().getIdCliente();
@@ -85,6 +99,18 @@ public class UsoPuntosDAO {
         }else {
             return "El cliente no tiene los puntos requeridos para canjear este vale";
         }
+//        if (cliente.getEmail() != null){
+//            sendEmail( cliente.getEmail(), "Se han utilizado puntos en "+ conceptoPuntos.getDescripcionConcepto());
+//        }
         return "";
     }
+
+//    private void sendEmail(String to, String mensaje){
+//        MailEvent event = new MailEvent();
+//        event.setTo(to);
+//        event.setSubject("Uso de puntos");
+//        event.setMessage(mensaje);
+//
+//        eventProducer.fire(event);
+//    }
 }

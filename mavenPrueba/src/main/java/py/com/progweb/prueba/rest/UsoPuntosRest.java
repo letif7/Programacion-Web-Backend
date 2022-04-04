@@ -37,4 +37,30 @@ public class UsoPuntosRest {
     public Response obtenerTodos(){
         return Response.ok(usoPuntosDAO.obtenerTodos()).build();
     }
+
+    @GET
+    @Path("/concepto/{id_concepto}")
+    public Response getUsoByConcepto(@PathParam("id_concepto") Integer idConcepto){
+        List<UsoPuntosCabecera> listaUsoPuntos = usoPuntosDAO.getByConcepto(idConcepto);
+        if (listaUsoPuntos == null){
+            return Response.status(400).entity("No se encontro UsoPuntos para ese Concepto").build();
+        }
+        return Response.ok(listaUsoPuntos).build();
+    }
+
+    @GET
+    @Path("/fecha/{fecha}")
+    public Response getUsoByFecha(@PathParam("fecha") String fecha){
+        return Response.ok(usoPuntosDAO.getByFecha(fecha)).build();
+    }
+
+    @GET
+    @Path("/cliente/{idCliente}")
+    public Response getUsoByCliente(@PathParam("idCliente") Integer idCliente){
+        List<UsoPuntosCabecera> listaUsoPuntos = usoPuntosDAO.getByCliente(idCliente);
+        if (listaUsoPuntos == null){
+            return Response.status(400).entity("No se encontro UsoPuntos para ese cliente").build();
+        }
+        return Response.ok(listaUsoPuntos).build();
+    }
 }

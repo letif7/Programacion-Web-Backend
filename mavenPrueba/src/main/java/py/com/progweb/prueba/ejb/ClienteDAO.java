@@ -7,8 +7,10 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
-
 
 @Stateless
 public class ClienteDAO {
@@ -27,6 +29,24 @@ public class ClienteDAO {
     public Cliente obtener(Integer idcliente){ //obtener uno
         Cliente cliente= this.em.find(Cliente.class, idcliente);
         return cliente;
+    }
+
+    public List<Cliente> getClientePorNombre(String nombre){
+        nombre = nombre + "%";
+        Query q= this.em.createQuery("select c from Cliente c where LOWER(c.nombre) like :nombre");
+        return (List<Cliente>) q.setParameter("nombre", nombre).getResultList();
+    }
+
+    public List<Cliente> getClientePorApellido(String apellido){
+        apellido = apellido + "%";
+        Query q= this.em.createQuery("select c from Cliente c where LOWER(c.apellido) like :apellido");
+        return (List<Cliente>) q.setParameter("apellido", apellido).getResultList();
+    }
+
+    public List<Cliente> getClientePorNacimiento(String nacimiento) throws ParseException {
+        Date nacim = new SimpleDateFormat("yyyy-MM-dd").parse(nacimiento);
+        Query q= this.em.createQuery("select c from Cliente c where c.fecha_nacimiento= :nacim");
+        return (List<Cliente>) q.setParameter("nacim",nacim).getResultList();
     }
 
     public String eliminarCliente(Integer idcliente){ //eliminar un cliente
