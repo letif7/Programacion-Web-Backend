@@ -1,13 +1,8 @@
-/target/
+target/
 .classpath
 .project
-/.settings/
-/src/main/java/py/com/progweb/prueba/test/
+.settings/
+src/main/java/py/com/progweb/prueba/test/
 
 
-/src/main/resources/META-INF/persistence.xml
-/target/classes/META-INF/persistence.xml
-/target/classes/py/com/progweb/prueba/rest/ApplicationConfig.class
-/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
-/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
 
