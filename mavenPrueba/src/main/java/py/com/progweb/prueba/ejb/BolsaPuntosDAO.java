@@ -83,8 +83,6 @@ public class BolsaPuntosDAO {
 		bolsa.setSaldo_puntos( saldo - puntosAUsar );
 	}
 
-	public BolsaPuntosDAO() {
-
 	public Integer obtenerPuntos(Integer monto_operacion) {
 		Integer puntos = monto_operacion/obtenerMontoPunto(monto_operacion);
 		return puntos;

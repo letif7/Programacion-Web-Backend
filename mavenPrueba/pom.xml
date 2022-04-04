@@ -7,11 +7,11 @@
   <name>primerparcial</name>
   <description>Primer Parcial BackEnd</description>
   <properties>
-  	<maven.compiler.source>16</maven.compiler.source>
-  	<maven.compiler.target>16</maven.compiler.target>
-  	<db.name>primerparcialbackend</db.name>
+  	<maven.compiler.source>15</maven.compiler.source>
+  	<maven.compiler.target>15</maven.compiler.target>
+  	<db.name>primerparcial</db.name>
   	<db.username>postgres</db.username>
-	<db.password>12345</db.password>
+	<db.password>postgres</db.password>
   </properties>
 	<dependencies>
 		<dependency>
@@ -153,9 +153,9 @@
 				 	<artifactId>flyway-maven-plugins</artifactId>
 				 	<version>4.0</version>
 				 	<configuration>
-				 		<url>jdbc:postgresql://localhost:5432/primerparcialbackend</url>
+				 		<url>jdbc:postgresql://localhost:5432/primerparcial</url>
 				 		<user>postgres</user>
-				 		<password>12345</password>
+				 		<password>postgres</password>
 				 	</configuration>
 				 	<dependencies>
 				 		<dependency>

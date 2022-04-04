@@ -1,7 +1,9 @@
-target/
-.classpath/
+/target/
+.classpath
+.project
+maven-prueba.iml
+/.settings/
 .project/
-.settings/
 src/main/java/py/com/progweb/prueba/test/
 .idea/
 

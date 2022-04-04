@@ -30,6 +30,20 @@ public class UsoPuntosDAO {
         return (List<UsoPuntosCabecera>)q.getResultList();
     }
 
+    public List<UsoPuntosCabecera> getByConcepto(Integer idConcepto){
+        Punto concepto = this.em.find(Punto.class, idConcepto);
+        if(concepto == null){
+            return null;
+        }
+        Query q = em.createQuery("select u from UsoPuntosCabecera u where u.concepto_uso = :concepto");
+        return (List<UsoPuntosCabecera>)q.setParameter("concepto",concepto).getResultList();
+    }
+
+//    public List<UsoPuntosCabecera> getByFecha(String fechaStr){
+//        java.util.Date fecha = java.sql.Date.valueOf(fechaStr);
+//        Query q = em.createQuery("select u from dsffesdfds");
+//    }
+
     public String utilizarPuntos(UsoPuntosCabecera usoPuntosCabecera){
         Integer idCliente = usoPuntosCabecera.getCliente().getIdCliente();
         Integer idConceptoUso = usoPuntosCabecera.getConcepto_uso().getIdPunto();
