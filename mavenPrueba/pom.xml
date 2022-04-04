@@ -9,9 +9,9 @@
   <properties>
   	<maven.compiler.source>15</maven.compiler.source>
   	<maven.compiler.target>15</maven.compiler.target>
-  	<db.name>primerparcial</db.name>
+  	<db.name>bdpwb_1</db.name>
   	<db.username>postgres</db.username>
-	<db.password>postgres</db.password>
+	<db.password>libros01</db.password>
   </properties>
 	<dependencies>
 		<dependency>
