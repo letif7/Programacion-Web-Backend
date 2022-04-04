@@ -1,6 +1,8 @@
 package py.com.progweb.prueba.rest;
 
+import javax.inject.Inject;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -16,16 +18,19 @@ import py.com.progweb.prueba.model.Cliente;
 @Consumes("application/json")
 @Produces("application/json")
 public class ServiciosPuntos {
-
+	@Inject
 	private BolsaPuntosDAO bolsaPuntosDAO;
-	private ClienteDAO clienteDAO;
-	
+
 	@POST
-    @Path("{idcliente}/{monto_operacion}")
-    public Response cargarPuntos(@PathParam("idcliente") Integer idcliente, @PathParam("monto_operacion") Integer monto_operacion){
-		Cliente cliente = clienteDAO.obtener(idcliente);
-        Integer estado = bolsaPuntosDAO.asignarPuntos(cliente, monto_operacion);
-        
-        return Response.ok().build();
+	@Path("/")
+	public Response cargarPuntos(BolsaPuntos bolsaPuntos){
+		bolsaPuntosDAO.agregar(bolsaPuntos);
+		return Response.ok().build();
 	}
+
+	@GET
+	@Path("/")
+	public Response listarTodos() { return  Response.ok(bolsaPuntosDAO.listarTodos()).build(); }
+
+
 }
