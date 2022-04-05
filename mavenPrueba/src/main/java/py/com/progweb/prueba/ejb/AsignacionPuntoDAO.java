@@ -27,10 +27,10 @@ public class AsignacionPuntoDAO {
         return asigancion_punto;
     }
 
-    public String eliminarAsignacionPuntos(Integer idAsignacionPunto){ //eliminar un cliente
+    public Integer eliminarAsignacionPuntos(Integer idAsignacionPunto){ //eliminar un cliente
         AsignacionPunto asignacionPunto;
         asignacionPunto = this.obtener(idAsignacionPunto);
-        String nombrePuntoAsignado;
+        Integer nombrePuntoAsignado;
         if (idAsignacionPunto != null){
             nombrePuntoAsignado = asignacionPunto.getMonto_punto();
             this.em.remove(asignacionPunto);
@@ -41,13 +41,13 @@ public class AsignacionPuntoDAO {
     }
 
     public Integer actualizar(@NotNull AsignacionPunto puntoAsignadoAct) { //actualizar los datos de un cliente
-      AsignacionPunto asignacionPuntoOld = this.obtener(puntoAsignadoAct.getIdAsignacionPuntos());
+      AsignacionPunto asignacionPuntoOld = this.obtener(puntoAsignadoAct.getId_asignacion());
         if (asignacionPuntoOld != null) {
             if (asignacionPuntoOld.getLimite_inferior() != null) {
                     asignacionPuntoOld.setLimite_inferior(puntoAsignadoAct.getLimite_inferior());
             }
             if (asignacionPuntoOld.getLimite_inferior() != null) {
-                asignacionPuntoOld.setLimite_inferior(puntoAsignadoAct.getLimite_superior());
+                asignacionPuntoOld.setLimite_inferior(puntoAsignadoAct.getLimite_inferior());
 
             }
             if (asignacionPuntoOld.getLimite_superior() != null) {

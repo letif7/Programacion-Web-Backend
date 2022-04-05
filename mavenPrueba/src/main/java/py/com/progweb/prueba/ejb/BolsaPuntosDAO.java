@@ -11,28 +11,29 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
+import py.com.progweb.prueba.model.AsignacionPunto;
 import py.com.progweb.prueba.model.BolsaPuntos;
-import py.com.progweb.prueba.model.Cliente;
 import py.com.progweb.prueba.model.VencimientoPuntos;
+
 
 @Stateless
 public class BolsaPuntosDAO {
 
 	@PersistenceContext(unitName = "pruebaPU")
 	private EntityManager em;
-	@Inject
-	private ClienteDAO clienteDAO;
+
 
 	public void agregar(BolsaPuntos bolsaPuntos) {
 
 		Date fecha_asignacion = new Date();
 		bolsaPuntos.setFecha_asignacion_puntaje(fecha_asignacion);
-		Date fechaExpiracion = sumarRestarDias(fecha_asignacion,obtenerDuracion(fecha_asignacion)+1);
+		VencimientoPuntos duracionVencimiento = obtenerDuracionVencimiento(fecha_asignacion).get(0);
+		Date fechaExpiracion = sumarRestarDias(fecha_asignacion,duracionVencimiento.getDias_duracion_puntaje());
 		bolsaPuntos.setFecha_caducidad_puntaje(fechaExpiracion);
-		//Integer puntaje = bolsaPuntos.getMonto_operacion()/obtenerMontoPunto(bolsaPuntos.getMonto_operacion());
-		//bolsaPuntos.setPuntaje_asignado(puntaje);
+		Integer puntos = obtenerPuntos(bolsaPuntos.getMonto_operacion());
+		bolsaPuntos.setPuntaje_asignado(puntos);
 		bolsaPuntos.setPuntaje_utilizado(0);
-		//bolsaPuntos.setSaldo_puntos(bolsaPuntos.getSaldo_puntos()+puntaje);
+		bolsaPuntos.setSaldo_puntos(puntos);
 		this.em.persist(bolsaPuntos);
 	}
 
@@ -40,10 +41,15 @@ public class BolsaPuntosDAO {
         Query q = this.em.createQuery("select v.dias_duracion_puntaje from VencimientoPuntos v where :fechaDate between v.fecha_inicio_validez and v.fecha_fin_validez");
         return q.setParameter("fechaDate",fecha).getFirstResult();
     }
+	
+	private List<VencimientoPuntos> obtenerDuracionVencimiento(Date fecha) {
+        Query q = this.em.createQuery("select v from VencimientoPuntos v where :fechaDate between v.fecha_inicio_validez and v.fecha_fin_validez");
+        return q.setParameter("fechaDate",fecha).getResultList();
+    }
 
-	private int obtenerMontoPunto(Integer monto_operacion ) {
-		Query q = this.em.createQuery("select v.monto_punto from AsignacionPuntos v where :monto_operacion between v.limite_inferior and v.limite_superior");
-		return q.setParameter("monto_operacion",monto_operacion).getFirstResult();
+	private int obtenerMontoPunto(Integer monto ) {
+		Query q = this.em.createQuery("select v.monto_punto from AsignacionPunto v where :monto_operacion between v.limite_inferior and v.limite_superior");
+		return q.setParameter("monto_operacion",monto).getFirstResult();
 	}
 
 	public Date sumarRestarDias(java.util.Date fecha, int dias){
@@ -59,7 +65,6 @@ public class BolsaPuntosDAO {
     }
 
 	public Integer getTotalPuntosByCliente(Integer idCliente){
-		Cliente cliente = clienteDAO.obtener(idCliente);
 		Query q = em.createQuery("Select SUM(b.saldo_puntos) from BolsaPuntos b where b.idcliente= :idCliente and b.saldo_puntos>0");
 		Long result = (Long)q.setParameter("idCliente", idCliente).getSingleResult();
 		if (result == null){
@@ -70,7 +75,6 @@ public class BolsaPuntosDAO {
 	}
 
 	public List<BolsaPuntos> getByClienteIdSaldoNoCero (Integer id_cliente){
-		Cliente cliente = clienteDAO.obtener(id_cliente);
 		Query q = em.createQuery("Select b from BolsaPuntos b where b.idcliente= :cliente and b.saldo_puntos>0 order by fecha_asignacion_puntaje asc");
 		return (List<BolsaPuntos>) q.setParameter("cliente",id_cliente).getResultList();
 	}
@@ -82,9 +86,15 @@ public class BolsaPuntosDAO {
 		bolsa.setPuntaje_utilizado( puntajeUtilizado + puntosAUsar);
 		bolsa.setSaldo_puntos( saldo - puntosAUsar );
 	}
+	
+	private List<AsignacionPunto> obtenerMontoPuntoAsignaccion(Integer monto ) {
+		Query q = this.em.createQuery("select v from AsignacionPunto v where :mont between v.limite_inferior and v.limite_superior");
+		return (List<AsignacionPunto>) q.setParameter("mont",monto).getResultList();
+	}
 
 	public Integer obtenerPuntos(Integer monto_operacion) {
-		Integer puntos = monto_operacion/obtenerMontoPunto(monto_operacion);
+		List<AsignacionPunto> asignacion = obtenerMontoPuntoAsignaccion(monto_operacion);
+		Integer puntos = monto_operacion/asignacion.get(0).getMonto_punto();
 		return puntos;
 	}
 

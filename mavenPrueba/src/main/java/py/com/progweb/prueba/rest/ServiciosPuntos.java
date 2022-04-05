@@ -32,7 +32,7 @@ public class ServiciosPuntos {
 	public Response listarTodos() { return  Response.ok(bolsaPuntosDAO.listarTodos()).build(); }
 
 	@GET
-	@Path("obtenerPuntos/{monto_operacion}")
+	@Path("/obtenerPuntos/{monto_operacion}")
 	public Response obtenerPuntos(@PathParam("monto_operacion") Integer monto_operacion) {
 		Integer puntos = bolsaPuntosDAO.obtenerPuntos(monto_operacion);
 

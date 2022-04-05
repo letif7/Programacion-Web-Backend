@@ -41,7 +41,7 @@ public class AsignacionPuntoRest {
         AsignacionPunto asignacionEliminado= asignacionPuntoDAO.obtener(id_asignacion);
         try {
             if (asignacionEliminado != null){
-                return Response.ok("Asignacion: "+asignacionEliminado+ " ha sido eliminada").build();
+                return Response.ok("Asignacion: "+asignacionEliminado.getId_asignacion()+ " ha sido eliminada").build();
             }else{
                 return Response.status(404).entity("Esta asignacion no existe en la Base de Datos").build();
             }
