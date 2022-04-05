@@ -1,17 +1,19 @@
 package py.com.progweb.prueba.ejb;
 
 import org.jetbrains.annotations.NotNull;
-
 import py.com.progweb.prueba.model.AsignacionPunto;
 
 import javax.ejb.Stateless;
+import javax.inject.Inject;
 import javax.persistence.*;
 import java.util.List;
+
 @Stateless
 public class AsignacionPuntoDAO {
 
     @PersistenceContext(unitName = "pruebaPU")
     private EntityManager em;
+    
     public void agregar(AsignacionPunto entidad){ //agregar
         this.em.persist(entidad);
     }

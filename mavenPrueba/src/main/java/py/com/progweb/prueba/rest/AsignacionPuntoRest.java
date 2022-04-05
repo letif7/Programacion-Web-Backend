@@ -1,9 +1,7 @@
 package py.com.progweb.prueba.rest;
 
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import py.com.progweb.prueba.ejb.AsignacionPuntoDAO;
 import py.com.progweb.prueba.model.AsignacionPunto;
-import py.com.progweb.prueba.model.Cliente;
 
 
 import javax.inject.Inject;
@@ -14,7 +12,7 @@ import javax.ws.rs.core.Response;
 @Path("asignacion_puntos")
 @Consumes("application/json")
 @Produces("application/json")
-public class AsigancionPuntoRest {
+public class AsignacionPuntoRest {
     @Inject
     private AsignacionPuntoDAO asignacionPuntoDAO;
 

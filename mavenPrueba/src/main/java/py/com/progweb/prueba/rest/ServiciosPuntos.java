@@ -10,17 +10,13 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 
 import py.com.progweb.prueba.ejb.BolsaPuntosDAO;
-import py.com.progweb.prueba.ejb.UsoPuntosDAO;
 import py.com.progweb.prueba.model.BolsaPuntos;
-import py.com.progweb.prueba.model.UsoPuntos;
 
 @Path("servicios-puntos")
 @Consumes("application/json")
 @Produces("application/json")
 public class ServiciosPuntos {
-	
-	@Inject
-	private UsoPuntosDAO usoPuntosDAO;
+
 	@Inject
 	private BolsaPuntosDAO bolsaPuntosDAO;
 	
@@ -43,13 +39,6 @@ public class ServiciosPuntos {
 		return Response.ok("La cantidad de puntos equivalente es "+puntos).build();
 	}
 
-	@POST
-	@Path("utilizar")
-	public Response usarPuntos(UsoPuntos usoPuntos){
-		usoPuntosDAO.agregarUso(usoPuntos);
-        return Response.ok().build();
-	}
-	
 	
 	
 }

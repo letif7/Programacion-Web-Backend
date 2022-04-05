@@ -1,21 +1,25 @@
-C:\Users\HP\Desktop\OCTAVO_SEMESTRE_2022\ProgramacionBackend-Electiva1\PRIMERPARCIAL\Programacion-Web-Backend\mavenPrueba\src\main\java\py\com\progweb\prueba\ejb\UsoPuntosDAO.java
-C:\Users\HP\Desktop\OCTAVO_SEMESTRE_2022\ProgramacionBackend-Electiva1\PRIMERPARCIAL\Programacion-Web-Backend\mavenPrueba\src\main\java\py\com\progweb\prueba\rest\Consultas.java
-C:\Users\HP\Desktop\OCTAVO_SEMESTRE_2022\ProgramacionBackend-Electiva1\PRIMERPARCIAL\Programacion-Web-Backend\mavenPrueba\src\main\java\py\com\progweb\prueba\model\BolsaPuntos.java
-C:\Users\HP\Desktop\OCTAVO_SEMESTRE_2022\ProgramacionBackend-Electiva1\PRIMERPARCIAL\Programacion-Web-Backend\mavenPrueba\src\main\java\py\com\progweb\prueba\rest\ClienteRest.java
-C:\Users\HP\Desktop\OCTAVO_SEMESTRE_2022\ProgramacionBackend-Electiva1\PRIMERPARCIAL\Programacion-Web-Backend\mavenPrueba\src\main\java\py\com\progweb\prueba\rest\AsigancionPuntoRest.java
-C:\Users\HP\Desktop\OCTAVO_SEMESTRE_2022\ProgramacionBackend-Electiva1\PRIMERPARCIAL\Programacion-Web-Backend\mavenPrueba\src\main\java\py\com\progweb\prueba\model\AsignacionPunto.java
-C:\Users\HP\Desktop\OCTAVO_SEMESTRE_2022\ProgramacionBackend-Electiva1\PRIMERPARCIAL\Programacion-Web-Backend\mavenPrueba\src\main\java\py\com\progweb\prueba\rest\ServiciosPuntos.java
-C:\Users\HP\Desktop\OCTAVO_SEMESTRE_2022\ProgramacionBackend-Electiva1\PRIMERPARCIAL\Programacion-Web-Backend\mavenPrueba\src\main\java\py\com\progweb\prueba\model\Cliente.java
-C:\Users\HP\Desktop\OCTAVO_SEMESTRE_2022\ProgramacionBackend-Electiva1\PRIMERPARCIAL\Programacion-Web-Backend\mavenPrueba\src\main\java\py\com\progweb\prueba\ejb\BolsaPuntosDAO.java
-C:\Users\HP\Desktop\OCTAVO_SEMESTRE_2022\ProgramacionBackend-Electiva1\PRIMERPARCIAL\Programacion-Web-Backend\mavenPrueba\src\main\java\py\com\progweb\prueba\ejb\ProcesoPlanificado.java
-C:\Users\HP\Desktop\OCTAVO_SEMESTRE_2022\ProgramacionBackend-Electiva1\PRIMERPARCIAL\Programacion-Web-Backend\mavenPrueba\src\main\java\py\com\progweb\prueba\model\VencimientoPuntos.java
-C:\Users\HP\Desktop\OCTAVO_SEMESTRE_2022\ProgramacionBackend-Electiva1\PRIMERPARCIAL\Programacion-Web-Backend\mavenPrueba\src\main\java\py\com\progweb\prueba\ejb\VencimientoDAO.java
-C:\Users\HP\Desktop\OCTAVO_SEMESTRE_2022\ProgramacionBackend-Electiva1\PRIMERPARCIAL\Programacion-Web-Backend\mavenPrueba\src\main\java\py\com\progweb\prueba\model\Punto.java
-C:\Users\HP\Desktop\OCTAVO_SEMESTRE_2022\ProgramacionBackend-Electiva1\PRIMERPARCIAL\Programacion-Web-Backend\mavenPrueba\src\main\java\py\com\progweb\prueba\ejb\ClienteDAO.java
-C:\Users\HP\Desktop\OCTAVO_SEMESTRE_2022\ProgramacionBackend-Electiva1\PRIMERPARCIAL\Programacion-Web-Backend\mavenPrueba\src\main\java\py\com\progweb\prueba\ejb\AsignacionPuntoDAO.java
-C:\Users\HP\Desktop\OCTAVO_SEMESTRE_2022\ProgramacionBackend-Electiva1\PRIMERPARCIAL\Programacion-Web-Backend\mavenPrueba\src\main\java\py\com\progweb\prueba\rest\PuntoRest.java
-C:\Users\HP\Desktop\OCTAVO_SEMESTRE_2022\ProgramacionBackend-Electiva1\PRIMERPARCIAL\Programacion-Web-Backend\mavenPrueba\src\main\java\py\com\progweb\prueba\test\TestMain.java
-C:\Users\HP\Desktop\OCTAVO_SEMESTRE_2022\ProgramacionBackend-Electiva1\PRIMERPARCIAL\Programacion-Web-Backend\mavenPrueba\src\main\java\py\com\progweb\prueba\model\UsoPuntos.java
-C:\Users\HP\Desktop\OCTAVO_SEMESTRE_2022\ProgramacionBackend-Electiva1\PRIMERPARCIAL\Programacion-Web-Backend\mavenPrueba\src\main\java\py\com\progweb\prueba\rest\VencimientoRest.java
-C:\Users\HP\Desktop\OCTAVO_SEMESTRE_2022\ProgramacionBackend-Electiva1\PRIMERPARCIAL\Programacion-Web-Backend\mavenPrueba\src\main\java\py\com\progweb\prueba\ejb\PuntoDAO.java
-C:\Users\HP\Desktop\OCTAVO_SEMESTRE_2022\ProgramacionBackend-Electiva1\PRIMERPARCIAL\Programacion-Web-Backend\mavenPrueba\src\main\java\py\com\progweb\prueba\rest\ApplicationConfig.java
+E:\NITRO 5\Documents\10mo_Semestre\Back-End\Primer-Parcial\mavenPrueba\src\main\java\py\com\progweb\prueba\rest\ApplicationConfig.java
+E:\NITRO 5\Documents\10mo_Semestre\Back-End\Primer-Parcial\mavenPrueba\src\main\java\py\com\progweb\prueba\ejb\MailEvent.java
+E:\NITRO 5\Documents\10mo_Semestre\Back-End\Primer-Parcial\mavenPrueba\src\main\java\py\com\progweb\prueba\ejb\AsignacionPuntoDAO.java
+E:\NITRO 5\Documents\10mo_Semestre\Back-End\Primer-Parcial\mavenPrueba\src\main\java\py\com\progweb\prueba\model\Punto.java
+E:\NITRO 5\Documents\10mo_Semestre\Back-End\Primer-Parcial\mavenPrueba\src\main\java\py\com\progweb\prueba\ejb\MailService.java
+E:\NITRO 5\Documents\10mo_Semestre\Back-End\Primer-Parcial\mavenPrueba\src\main\java\py\com\progweb\prueba\model\BolsaPuntos.java
+E:\NITRO 5\Documents\10mo_Semestre\Back-End\Primer-Parcial\mavenPrueba\src\main\java\py\com\progweb\prueba\rest\ClienteRest.java
+E:\NITRO 5\Documents\10mo_Semestre\Back-End\Primer-Parcial\mavenPrueba\src\main\java\py\com\progweb\prueba\ejb\ClienteDAO.java
+E:\NITRO 5\Documents\10mo_Semestre\Back-End\Primer-Parcial\mavenPrueba\src\main\java\py\com\progweb\prueba\model\UsoPuntosDetalle.java
+E:\NITRO 5\Documents\10mo_Semestre\Back-End\Primer-Parcial\mavenPrueba\src\main\java\py\com\progweb\prueba\ejb\ResourcesProducer.java
+E:\NITRO 5\Documents\10mo_Semestre\Back-End\Primer-Parcial\mavenPrueba\src\main\java\py\com\progweb\prueba\ejb\VencimientoDAO.java
+E:\NITRO 5\Documents\10mo_Semestre\Back-End\Primer-Parcial\mavenPrueba\src\main\java\py\com\progweb\prueba\model\UsoPuntosCabecera.java
+E:\NITRO 5\Documents\10mo_Semestre\Back-End\Primer-Parcial\mavenPrueba\src\main\java\py\com\progweb\prueba\rest\VencimientoRest.java
+E:\NITRO 5\Documents\10mo_Semestre\Back-End\Primer-Parcial\mavenPrueba\src\main\java\py\com\progweb\prueba\ejb\BolsaPuntosDAO.java
+E:\NITRO 5\Documents\10mo_Semestre\Back-End\Primer-Parcial\mavenPrueba\src\main\java\py\com\progweb\prueba\rest\PuntoRest.java
+E:\NITRO 5\Documents\10mo_Semestre\Back-End\Primer-Parcial\mavenPrueba\src\main\java\py\com\progweb\prueba\ejb\PuntoDAO.java
+E:\NITRO 5\Documents\10mo_Semestre\Back-End\Primer-Parcial\mavenPrueba\src\main\java\py\com\progweb\prueba\rest\AsignacionPuntoRest.java
+E:\NITRO 5\Documents\10mo_Semestre\Back-End\Primer-Parcial\mavenPrueba\src\main\java\py\com\progweb\prueba\ejb\ProcesoPlanificado.java
+E:\NITRO 5\Documents\10mo_Semestre\Back-End\Primer-Parcial\mavenPrueba\src\main\java\py\com\progweb\prueba\model\Cliente.java
+E:\NITRO 5\Documents\10mo_Semestre\Back-End\Primer-Parcial\mavenPrueba\src\main\java\py\com\progweb\prueba\rest\UsoPuntosRest.java
+E:\NITRO 5\Documents\10mo_Semestre\Back-End\Primer-Parcial\mavenPrueba\src\main\java\py\com\progweb\prueba\rest\ServiciosPuntos.java
+E:\NITRO 5\Documents\10mo_Semestre\Back-End\Primer-Parcial\mavenPrueba\src\main\java\py\com\progweb\prueba\rest\Consultas.java
+E:\NITRO 5\Documents\10mo_Semestre\Back-End\Primer-Parcial\mavenPrueba\src\main\java\py\com\progweb\prueba\model\AsignacionPunto.java
+E:\NITRO 5\Documents\10mo_Semestre\Back-End\Primer-Parcial\mavenPrueba\src\main\java\py\com\progweb\prueba\model\VencimientoPuntos.java
+E:\NITRO 5\Documents\10mo_Semestre\Back-End\Primer-Parcial\mavenPrueba\src\main\java\py\com\progweb\prueba\ejb\UsoPuntosDAO.java
