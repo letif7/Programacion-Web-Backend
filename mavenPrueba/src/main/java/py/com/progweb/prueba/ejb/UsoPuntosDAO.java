@@ -9,7 +9,6 @@ import javax.persistence.Query;
 
 import py.com.progweb.prueba.model.BolsaPuntos;
 import py.com.progweb.prueba.model.UsoPuntos;
-import py.com.progweb.prueba.model.VencimientoPuntos;
 @Stateless
 public class UsoPuntosDAO {
 

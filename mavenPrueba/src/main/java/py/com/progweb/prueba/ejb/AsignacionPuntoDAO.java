@@ -1,11 +1,13 @@
 package py.com.progweb.prueba.ejb;
 
 import org.jetbrains.annotations.NotNull;
+
 import py.com.progweb.prueba.model.AsignacionPunto;
 
+import javax.ejb.Stateless;
 import javax.persistence.*;
 import java.util.List;
-
+@Stateless
 public class AsignacionPuntoDAO {
 
     @PersistenceContext(unitName = "pruebaPU")

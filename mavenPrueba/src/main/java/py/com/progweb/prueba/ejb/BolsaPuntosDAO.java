@@ -39,7 +39,7 @@ public class BolsaPuntosDAO {
     }
 
 	private int obtenerMontoPunto(Integer monto_operacion ) {
-        Query q = this.em.createQuery("select v.monto_punto from AsignacionPuntos v where :monto_operacion between v.limite_inferior and v.limite_superior");
+        Query q = this.em.createQuery("select v.monto_punto from AsignacionPunto v where :monto_operacion between v.limite_inferior and v.limite_superior");
         return q.setParameter("monto_operacion",monto_operacion).getFirstResult();
     }
 

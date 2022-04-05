@@ -8,8 +8,8 @@ public class AsignacionPunto {
     @Column(name = "id_asignacion")
     @Basic(optional = false)    //el atributo no es null
     @GeneratedValue(generator = "asignacion_puntosSec", strategy = GenerationType.SEQUENCE)
-    @SequenceGenerator(name = "asignaicon_puntosSec",sequenceName = "asignacion_puntos_sec",allocationSize = 0)
-    private Integer idAsignacionPuntos;
+    @SequenceGenerator(name = "asignacion_puntosSec",sequenceName = "asignacion_puntos_sec",allocationSize = 0)
+    private Integer id_asignacion;
     @Column(name = "limite_inferior", length = 50)
     @Basic(optional = true)
     private String limite_inferior;
@@ -25,11 +25,11 @@ public class AsignacionPunto {
     }
 
     public Integer getIdAsignacionPuntos() {
-        return idAsignacionPuntos;
+        return id_asignacion;
     }
 
     public void setIdAsignacionPuntos(Integer idAsignacionPuntos) {
-        this.idAsignacionPuntos = idAsignacionPuntos;
+        this.id_asignacion = idAsignacionPuntos;
     }
 
     public String getLimite_inferior() {

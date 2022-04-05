@@ -7,7 +7,7 @@ import java.util.Date;
 public class UsoPuntos {
 
 	    @Id
-	    @Column(name = "idp_uso")  //apunta a id_persona en la DB
+	    @Column(name = "id_uso")  //apunta a id_persona en la DB
 	    @Basic(optional = false)    //el atributo no es null
 	    @GeneratedValue(generator = "usoPuntosSec", strategy = GenerationType.SEQUENCE)
 	    @SequenceGenerator(name = "usoPuntosSec",sequenceName = "uso_puntos_sec",allocationSize = 0)
