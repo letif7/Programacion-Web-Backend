@@ -4,18 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1b6c4b8-632b-473b-9982-235288166210" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="b1b6c4b8-632b-473b-9982-235288166210" name="Changes" comment="actualizacion de ejb y model">
+      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/maven_prueba_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/maven_prueba_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" afterPath="$PROJECT_DIR$/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/src/main/resources/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/maven-prueba.iml" beforeDir="false" afterPath="$PROJECT_DIR$/maven-prueba.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/py/com/progweb/prueba/ejb/AsignacionPuntoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/py/com/progweb/prueba/ejb/AsignacionPuntoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/py/com/progweb/prueba/ejb/BolsaPuntosDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/py/com/progweb/prueba/ejb/BolsaPuntosDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/py/com/progweb/prueba/ejb/UsoPuntosDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/py/com/progweb/prueba/ejb/UsoPuntosDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/py/com/progweb/prueba/model/AsignacionPunto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/py/com/progweb/prueba/model/AsignacionPunto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/py/com/progweb/prueba/model/UsoPuntos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/py/com/progweb/prueba/model/UsoPuntos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/py/com/progweb/prueba/rest/ApplicationConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/py/com/progweb/prueba/rest/ApplicationConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +120,9 @@
       <workItem from="1649020559208" duration="557000" />
       <workItem from="1649070372626" duration="9112000" />
       <workItem from="1649087009250" duration="1106000" />
-      <workItem from="1649096456324" duration="4379000" />
+      <workItem from="1649096456324" duration="5948000" />
+      <workItem from="1649132960259" duration="1787000" />
+      <workItem from="1649175555183" duration="2972000" />
     </task>
     <servers />
   </component>
@@ -136,5 +139,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="actualizacion de ejb y model" />
+    <option name="LAST_COMMIT_MESSAGE" value="actualizacion de ejb y model" />
   </component>
 </project>

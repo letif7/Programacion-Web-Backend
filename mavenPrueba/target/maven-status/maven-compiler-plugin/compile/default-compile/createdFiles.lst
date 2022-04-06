@@ -17,6 +17,7 @@ py\com\progweb\prueba\ejb\ProcesoPlanificado.class
 py\com\progweb\prueba\rest\ServiciosPuntos.class
 py\com\progweb\prueba\rest\ClienteRest.class
 py\com\progweb\prueba\model\AsignacionPunto.class
+py\com\progweb\prueba\test\TestMain.class
 py\com\progweb\prueba\ejb\AsignacionPuntoDAO.class
 py\com\progweb\prueba\model\UsoPuntosDetalle.class
 py\com\progweb\prueba\model\Cliente.class
